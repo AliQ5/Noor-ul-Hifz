@@ -6,7 +6,7 @@ Modern static landing page for Noor-ul-Hifz.
 Open `script.js` and replace:
 
 ```js
-const GITHUB_RELEASE_URL = "https://github.com/REPLACE-ME/noor-ul-hifz/releases/latest";
+const GITHUB_RELEASE_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_1/Noor-ul-Hifz_V1.zip";
 ```
 
 with the real GitHub Releases URL. All Download buttons and the GitHub contact link will then point to it.
