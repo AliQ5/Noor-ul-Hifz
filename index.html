@@ -4,55 +4,98 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Noor-ul-Hifz — a modern offline student monitoring and daily Hifz reporting application for institutes and Madaris.">
+  <meta name="theme-color" content="#f4eee2">
   <title>Noor-ul-Hifz — Student Monitoring, Simplified</title>
+  <link rel="icon" href="assets/noor-ul-hifz-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Amiri:wght@400;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+  <div class="grain" aria-hidden="true"></div>
+
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="Noor-ul-Hifz home">
-        <span class="brand-mark"><img src="assets/noor-ul-hifz-logo.png" alt="Noor-ul-Hifz logo"></span>
-        <span><strong>Noor-ul-Hifz</strong><small>نور الحفظ</small></span>
+        <span class="brand-mark"><img src="assets/noor-ul-hifz-logo.png" alt=""></span>
+        <span class="brand-text"><strong>Noor-ul-Hifz</strong><small lang="ar">نور الحفظ</small></span>
       </a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="#features">Features</a>
-        <a href="#workflow">How it works</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a class="roll" href="#features"><span>Features</span></a>
+        <a class="roll" href="#workflow"><span>How it works</span></a>
+        <a class="roll" href="#about"><span>About</span></a>
+        <a class="roll" href="#contact"><span>Contact</span></a>
       </nav>
-      <a class="btn btn-primary btn-small" data-download href="#download">Download <span>↗</span></a>
+      <div class="nav-actions">
+        <a class="btn btn-ink btn-small" data-download href="#download"><span class="roll"><span>Download</span></span> <i class="btn-arrow">↗</i></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span class="sr-only">Open menu</span><i></i><i></i></button>
+      </div>
     </div>
   </header>
 
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile navigation">
+      <a href="#features"><strong>Features</strong><small>Import, totals, reports and export</small></a>
+      <a href="#workflow"><strong>How it works</strong><small>Four steps from sheet to record</small></a>
+      <a href="#about"><strong>About</strong><small>Why Noor-ul-Hifz exists</small></a>
+      <a href="#contact"><strong>Contact</strong><small>Talk to the developer</small></a>
+    </nav>
+    <a class="btn btn-gold" data-download href="#download">Download for Windows <i class="btn-arrow">↓</i></a>
+  </div>
+
   <main>
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero-glow"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="dot"></span> Built for Hifz & Quran institutes</div>
-          <h1>Daily student records,<br><em>beautifully simplified.</em></h1>
-          <p class="hero-text">Noor-ul-Hifz turns daily teacher sheets into a clean, organized offline system for tracking attendance, late arrivals, Sabaq, Sabqi and Manzil.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" data-download href="#download">Download for Windows <span>↓</span></a>
-            <a class="btn btn-ghost" href="#features">Explore features <span>→</span></a>
-          </div>
-          <div class="trust-row">
-            <span>✓ Offline-first</span><span>✓ Excel compatible</span><span>✓ Local SQLite</span>
+      <div class="container">
+        <div class="hero-top">
+          <span class="eyebrow"><span class="dot"></span> Built for Hifz &amp; Qur'an institutes</span>
+          <span class="eyebrow eyebrow-right">Windows · Offline · v1</span>
+        </div>
+
+        <h1 class="hero-title" aria-label="Bye bye scattered sheets, hello Noor-ul-Hifz">
+          <span class="line"><span class="line-in">Bye bye</span></span>
+          <span class="line line-indent"><span class="line-in"><em>scattered</em> sheets…</span></span>
+          <span class="line line-hello"><span class="line-in">hello <span class="hello-ar" lang="ar">نور الحفظ</span></span></span>
+        </h1>
+
+        <div class="hero-bottom">
+          <p class="hero-text reveal">Noor-ul-Hifz turns the daily teacher sheet into a calm, organised offline record of attendance, late arrivals, Sabaq, Sabqi and Manzil, kept for every student, every day.</p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-ink" data-download href="#download">Download for Windows <i class="btn-arrow">↓</i></a>
+            <a class="btn btn-line" href="#features">See what it does <i class="btn-arrow">→</i></a>
           </div>
         </div>
-        <div class="hero-card-wrap">
-          <div class="orb orb-a"></div><div class="orb orb-b"></div>
-          <div class="app-window">
-            <div class="window-top"><div class="window-brand"><span class="mini-logo">ن</span><b>Noor-ul-Hifz</b></div><div class="window-dots"><i></i><i></i><i></i></div></div>
-            <div class="window-body">
-              <aside class="window-sidebar"><div class="side-active">▦ <span>Dashboard</span></div><div>↥ <span>Import Report</span></div><div>◎ <span>Collect Report</span></div><div>◉ <span>All Students</span></div></aside>
-              <div class="dashboard-preview">
-                <div class="preview-head"><div><small>DAILY OVERVIEW</small><h3>Student Monitoring</h3></div><span class="date-pill">Today · 02 Oct 2026</span></div>
-                <div class="stat-grid"><div><small>Students</small><strong>128</strong><span>Registered</span></div><div><small>Absent</small><strong>07</strong><span>Today</span></div><div><small>Late</small><strong>12</strong><span>Today</span></div></div>
-                <div class="table-preview"><div class="table-title">Daily status <span>View all →</span></div><div class="row"><b>#1024</b><span>Muhammad Abdullah</span><i class="tag green">Present</i></div><div class="row"><b>#1051</b><span>Ahmad Raza</span><i class="tag amber">Late</i></div><div class="row"><b>#1088</b><span>Hamza Khan</span><i class="tag red">Sabaq</i></div></div>
+      </div>
+
+      <div class="container hero-stage reveal">
+        <div class="sticker sticker-a" aria-hidden="true">Offline<br>first</div>
+        <div class="sticker sticker-b" aria-hidden="true"><span lang="ar">ن</span></div>
+        <div class="app-window">
+          <div class="window-top">
+            <div class="window-brand"><span class="mini-logo" lang="ar">ن</span><b>Noor-ul-Hifz</b></div>
+            <div class="window-dots"><i></i><i></i><i></i></div>
+          </div>
+          <div class="window-body">
+            <aside class="window-sidebar">
+              <div class="side-active">▦ <span>Dashboard</span></div>
+              <div>↥ <span>Import Report</span></div>
+              <div>◎ <span>Collect Report</span></div>
+              <div>◉ <span>All Students</span></div>
+            </aside>
+            <div class="dashboard-preview">
+              <div class="preview-head"><div><small>Daily overview</small><h3>Student Monitoring</h3></div><span class="date-pill">Today · 02 Oct 2026</span></div>
+              <div class="stat-grid">
+                <div><small>Students</small><strong>128</strong><span>Registered</span></div>
+                <div><small>Absent</small><strong>07</strong><span>Today</span></div>
+                <div><small>Late</small><strong>12</strong><span>Today</span></div>
+              </div>
+              <div class="table-preview">
+                <div class="table-title">Daily status <span>View all →</span></div>
+                <div class="row"><b>#1024</b><span>Muhammad Abdullah</span><i class="tag green">Present</i></div>
+                <div class="row"><b>#1051</b><span>Ahmad Raza</span><i class="tag amber">Late</i></div>
+                <div class="row"><b>#1088</b><span>Hamza Khan</span><i class="tag red">Sabaq</i></div>
               </div>
             </div>
           </div>
@@ -60,49 +103,181 @@
       </div>
     </section>
 
-    <section class="section proof">
-      <div class="container proof-grid"><div><span class="section-kicker">A focused workflow</span><h2>From a daily Excel sheet to an organized record in seconds.</h2></div><p>Noor-ul-Hifz is designed around the way institutes already work. Import the familiar daily report, review the records, choose the correct date and save. Your history stays local and searchable.</p></div>
-    </section>
-
-    <section class="section" id="features">
-      <div class="container">
-        <div class="section-heading"><span class="section-kicker">Everything you need</span><h2>Simple on the surface.<br>Powerful underneath.</h2><p>Purpose-built tools for the daily administration of Hifz students — without unnecessary complexity.</p></div>
-        <div class="feature-grid">
-          <article class="feature-card featured"><div class="feature-icon">↥</div><h3>Smart Excel Import</h3><p>Import your existing daily report using fixed, reliable sections for each student condition. No data retyping.</p><span class="feature-note">5 daily categories</span></article>
-          <article class="feature-card"><div class="feature-icon">◷</div><h3>Flexible Dates</h3><p>Review every import before saving. The date defaults to today and can be changed, while future dates are blocked.</p></article>
-          <article class="feature-card"><div class="feature-icon">▤</div><h3>All Students</h3><p>Keep one clean student directory with totals for absence, lateness, Sabaq, Sabqi and Manzil.</p></article>
-          <article class="feature-card"><div class="feature-icon">◫</div><h3>Collect Reports</h3><p>Enter a student ID and quickly retrieve accumulated records from your saved daily history.</p></article>
-          <article class="feature-card"><div class="feature-icon">⇩</div><h3>Excel Export</h3><p>Turn stored records into practical Excel reports for office work, review and archiving.</p></article>
-          <article class="feature-card"><div class="feature-icon">⌁</div><h3>Offline & Private</h3><p>Local SQLite storage means the core application can work without an internet connection or cloud account.</p></article>
+    <!-- MARQUEE -->
+    <section class="marquee" aria-label="Daily categories tracked">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span><b lang="ur">غیر حاضری</b> Absent</span><i>✦</i>
+          <span><b lang="ur">تاخیر</b> Late</span><i>✦</i>
+          <span><b lang="ur">سبق کا ناغہ</b> Sabaq</span><i>✦</i>
+          <span><b lang="ur">سبقی کا ناغہ</b> Sabqi</span><i>✦</i>
+          <span><b lang="ur">منزل کا ناغہ</b> Manzil</span><i>✦</i>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span><b lang="ur">غیر حاضری</b> Absent</span><i>✦</i>
+          <span><b lang="ur">تاخیر</b> Late</span><i>✦</i>
+          <span><b lang="ur">سبق کا ناغہ</b> Sabaq</span><i>✦</i>
+          <span><b lang="ur">سبقی کا ناغہ</b> Sabqi</span><i>✦</i>
+          <span><b lang="ur">منزل کا ناغہ</b> Manzil</span><i>✦</i>
         </div>
       </div>
     </section>
 
-    <section class="section workflow" id="workflow">
+    <!-- STATEMENT -->
+    <section class="section statement">
       <div class="container">
-        <div class="section-heading centered"><span class="section-kicker">How it works</span><h2>Four calm steps. No clutter.</h2></div>
-        <div class="steps"><div class="step"><span>01</span><h3>Select</h3><p>Choose the daily Excel report from your computer.</p></div><div class="step"><span>02</span><h3>Review</h3><p>See the file name, student count and category totals before saving.</p></div><div class="step"><span>03</span><h3>Set date</h3><p>Use today's date or select a previous date for historical records.</p></div><div class="step"><span>04</span><h3>Save</h3><p>Store the day locally and use it later for reports and totals.</p></div></div>
+        <span class="section-kicker reveal">A focused workflow</span>
+        <p class="statement-text">
+          <span class="reveal">Every day your teachers note</span>
+          <span class="reveal">who was <span class="chip chip-rose">absent</span>, who came</span>
+          <span class="reveal"><span class="chip chip-amber">late</span> and who missed</span>
+          <span class="reveal"><span class="chip chip-navy">Sabaq</span> <em>or</em> <span class="chip chip-gold">Manzil</span>.</span>
+          <span class="reveal muted">Noor-ul-Hifz keeps all of it,</span>
+          <span class="reveal muted">and counts it for you.</span>
+        </p>
       </div>
     </section>
 
-    <section class="section privacy">
-      <div class="container privacy-card"><div class="privacy-icon">✓</div><div><span class="section-kicker">Local by design</span><h2>Your institute's records stay with your institute.</h2><p>The application is built around local storage. Your daily records don't need a remote dashboard, subscription or always-on internet connection.</p></div><div class="privacy-points"><span>Local SQLite database</span><span>No account required</span><span>Offline workflow</span></div></div>
+    <!-- FEATURES -->
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker reveal">Everything you need</span>
+          <h2 class="display reveal">Simple on the surface.<br><em>Powerful</em> underneath.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card fc-navy fc-wide reveal">
+            <span class="fc-num">01</span>
+            <div class="fc-icon">↥</div>
+            <h3>Smart Excel Import</h3>
+            <p>Import your existing daily report directly. Fixed, reliable sections for each student condition, with no retyping.</p>
+            <span class="fc-note">5 daily categories</span>
+          </article>
+          <article class="feature-card fc-gold reveal">
+            <span class="fc-num">02</span>
+            <div class="fc-icon">◷</div>
+            <h3>Flexible Dates</h3>
+            <p>Review every import before saving. The date defaults to today, can be changed, and future dates are blocked.</p>
+          </article>
+          <article class="feature-card fc-paper reveal">
+            <span class="fc-num">03</span>
+            <div class="fc-icon">▤</div>
+            <h3>All Students</h3>
+            <p>One clean directory with running totals for absence, lateness, Sabaq, Sabqi and Manzil.</p>
+          </article>
+          <article class="feature-card fc-cream reveal">
+            <span class="fc-num">04</span>
+            <div class="fc-icon">◫</div>
+            <h3>Collect Reports</h3>
+            <p>Enter a student ID and pull every accumulated record from your saved daily history.</p>
+          </article>
+          <article class="feature-card fc-paper reveal">
+            <span class="fc-num">05</span>
+            <div class="fc-icon">⇩</div>
+            <h3>Excel Export</h3>
+            <p>Turn stored records into practical Excel reports for the office, monthly review and archiving.</p>
+          </article>
+          <article class="feature-card fc-ink fc-full reveal">
+            <span class="fc-num">06</span>
+            <div class="fc-icon">⌁</div>
+            <h3>Offline &amp; Private</h3>
+            <p>Local SQLite storage means the core application works without an internet connection or a cloud account.</p>
+            <span class="fc-note">No account required</span>
+          </article>
+        </div>
+      </div>
     </section>
 
+    <!-- INTERLUDE -->
+    <section class="section interlude">
+      <div class="container interlude-inner">
+        <p class="interlude-text reveal">5 categories × 30 school days × every student in the institute.<br><em>That's a lot of counting by hand.</em></p>
+        <a class="btn btn-line reveal" href="#workflow">This is why <i class="btn-arrow">↓</i></a>
+      </div>
+    </section>
+
+    <!-- WORKFLOW -->
+    <section class="section workflow" id="workflow">
+      <div class="container">
+        <div class="section-heading split">
+          <span class="section-kicker reveal">How it works</span>
+          <h2 class="display reveal">Four calm steps.<br><em>No clutter.</em></h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal"><span class="step-num">01</span><h3>Select</h3><p>Choose the daily Excel report from your computer.</p><i class="step-arrow">→</i></li>
+          <li class="step reveal"><span class="step-num">02</span><h3>Review</h3><p>See the file name, student count and category totals before saving.</p><i class="step-arrow">→</i></li>
+          <li class="step reveal"><span class="step-num">03</span><h3>Set date</h3><p>Use today's date, or pick a previous day for historical records.</p><i class="step-arrow">→</i></li>
+          <li class="step reveal"><span class="step-num">04</span><h3>Save</h3><p>Store the day locally and use it later for reports and totals.</p><i class="step-arrow">→</i></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section class="privacy">
+      <div class="container privacy-inner">
+        <div class="privacy-moon" aria-hidden="true"></div>
+        <span class="section-kicker light reveal">Local by design</span>
+        <h2 class="display reveal">Your institute's records<br><em>stay with your institute.</em></h2>
+        <p class="reveal">Built around local storage. Your daily records don't need a remote dashboard, a subscription or an always-on internet connection.</p>
+        <div class="privacy-points reveal"><span>Local SQLite database</span><span>No account required</span><span>Offline workflow</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
     <section class="section about" id="about">
-      <div class="container about-grid"><div><span class="section-kicker">The project</span><h2>Built with care for real institute workflows.</h2></div><div><p>Noor-ul-Hifz was created to replace scattered daily sheets with a consistent, practical record system. The goal is not to make administration complicated — it is to make the information already being collected easier to preserve, review and use.</p><div class="author"><div class="author-avatar">AQ</div><div><small>Author & Developer</small><strong>ALI QURESHI</strong></div></div></div></div>
+      <div class="container about-grid">
+        <div>
+          <span class="section-kicker reveal">The project</span>
+          <h2 class="display reveal">Built with care for <em>real</em> institute workflows.</h2>
+        </div>
+        <div class="about-copy">
+          <p class="reveal">Noor-ul-Hifz was created to replace scattered daily sheets with a consistent, practical record system. The goal isn't to make administration complicated. It's to make the information already being collected easier to keep, review and use.</p>
+          <p class="about-meaning reveal"><span lang="ar">نور الحفظ</span> means <em>"Light of Memorisation."</em></p>
+          <div class="author reveal"><div class="author-avatar">AQ</div><div><small>Author &amp; Developer</small><strong>ALI QURESHI</strong></div></div>
+        </div>
+      </div>
     </section>
 
+    <!-- DOWNLOAD -->
     <section class="download-section" id="download">
-      <div class="container download-card"><div class="download-art"><img src="assets/noor-ul-hifz-logo.png" alt="Noor-ul-Hifz"></div><div><span class="section-kicker">Ready when you are</span><h2>Bring your daily reports into one place.</h2><p>Download Noor-ul-Hifz for Windows and start organizing your institute's records locally.</p><a class="btn btn-primary" data-download href="#download">Download Noor-ul-Hifz <span>↓</span></a><small class="download-note">Windows desktop application · GitHub Releases</small></div></div>
+      <div class="container">
+        <a class="download-big" data-download href="#download">
+          <span class="download-kicker">Ready when you are</span>
+          <span class="download-word"><span class="roll"><span>download it</span></span></span>
+          <span class="download-meta">Windows desktop application · GitHub Releases <i class="btn-arrow">↓</i></span>
+        </a>
+        <div class="download-art reveal"><img src="assets/noor-ul-hifz-logo.png" alt="Noor-ul-Hifz logo"></div>
+      </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="section contact" id="contact">
-      <div class="container contact-grid"><div><span class="section-kicker">Get in touch</span><h2>Need help or want to discuss the project?</h2><p>Contact the author and developer directly.</p></div><div class="contact-list"><a href="tel:+923002917500"><span>Phone</span><strong>0300-2917500</strong></a><a href="mailto:aliaqureshi75@gmail.com"><span>Email</span><strong>aliaqureshi75@gmail.com</strong></a><a data-github href="#" target="_blank" rel="noopener"><span>Source & Releases</span><strong>GitHub ↗</strong></a></div></div>
+      <div class="container contact-grid">
+        <div>
+          <span class="section-kicker reveal">Get in touch</span>
+          <h2 class="display reveal">Need help, or want to <em>talk it through?</em></h2>
+          <p class="reveal">Contact the author and developer directly.</p>
+        </div>
+        <div class="contact-list">
+          <a class="reveal" href="tel:+923002917500"><span>Phone</span><strong>0300-2917500</strong><i>↗</i></a>
+          <a class="reveal" href="mailto:aliaqureshi75@gmail.com"><span>Email</span><strong>aliaqureshi75@gmail.com</strong><i>↗</i></a>
+          <a class="reveal" data-github href="#" target="_blank" rel="noopener"><span>Source &amp; Releases</span><strong>GitHub</strong><i>↗</i></a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer><div class="container footer-wrap"><div class="brand footer-brand"><span class="brand-mark small"><img src="assets/noor-ul-hifz-logo.png" alt=""></span><span><strong>Noor-ul-Hifz</strong><small>نور الحفظ</small></span></div><p>© <span id="year"></span> Noor-ul-Hifz · Developed by <b>ALI QURESHI</b></p><a href="#top">Back to top ↑</a></div></footer>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-wordmark" aria-hidden="true">Noor-ul-Hifz</div>
+      <div class="footer-wrap">
+        <div class="brand footer-brand"><span class="brand-mark small"><img src="assets/noor-ul-hifz-logo.png" alt=""></span><span class="brand-text"><strong>Noor-ul-Hifz</strong><small lang="ar">نور الحفظ</small></span></div>
+        <p>© <span id="year"></span> Noor-ul-Hifz · Developed by <b>ALI QURESHI</b></p>
+        <a class="roll" href="#top"><span>Back to top ↑</span></a>
+      </div>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
