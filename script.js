@@ -1,5 +1,5 @@
 /* Replace these two values with the real GitHub repository/release URL. */
-const GITHUB_RELEASE_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_1/Noor-ul-Hifz_V1.zip";
+const GITHUB_RELEASE_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_2/Noor-ul-Hifz-Setup-2.0.zip";
 const DOWNLOAD_URL = GITHUB_RELEASE_URL;
 
 document.querySelectorAll('[data-download]').forEach(a => {
