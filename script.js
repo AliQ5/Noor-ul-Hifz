@@ -1,6 +1,10 @@
-/* Replace these two values with the real GitHub repository/release URL. */
-const GITHUB_RELEASE_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_2/Noor-ul-Hifz-Setup-2.0.zip";
-const DOWNLOAD_URL = GITHUB_RELEASE_URL;
+/* Noor-ul-Hifz GitHub repository & release links */
+const GITHUB_REPO_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App";
+const V3_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_3/Noor-ul-Hifz-Setup-3.0.zip";
+const V2_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_2/Noor-ul-Hifz-Setup-2.0.zip";
+const V1_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_1/Noor-ul-Hifz_V1.zip";
+
+const DOWNLOAD_URL = V3_DOWNLOAD_URL;
 
 document.querySelectorAll('[data-download]').forEach(a => {
   a.href = DOWNLOAD_URL;
@@ -8,7 +12,9 @@ document.querySelectorAll('[data-download]').forEach(a => {
   a.rel = 'noopener';
 });
 document.querySelectorAll('[data-github]').forEach(a => {
-  a.href = GITHUB_RELEASE_URL;
+  a.href = GITHUB_REPO_URL;
+  a.target = '_blank';
+  a.rel = 'noopener';
 });
 document.getElementById('year').textContent = new Date().getFullYear();
 

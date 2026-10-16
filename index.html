@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Noor-ul-Hifz — a modern offline student monitoring and daily Hifz reporting application for institutes and Madaris.">
+  <meta name="description" content="Noor-ul-Hifz V3 — offline student monitoring, manual entry, customizable categories, and daily Hifz reporting for institutes and Madaris.">
   <meta name="theme-color" content="#f4eee2">
   <title>Noor-ul-Hifz — Student Monitoring, Simplified</title>
   <link rel="icon" href="assets/noor-ul-hifz-logo.png">
@@ -25,11 +25,12 @@
       <nav class="nav" aria-label="Main navigation">
         <a class="roll" href="#features"><span>Features</span></a>
         <a class="roll" href="#workflow"><span>How it works</span></a>
+        <a class="roll" href="#releases"><span>Releases</span></a>
         <a class="roll" href="#about"><span>About</span></a>
         <a class="roll" href="#contact"><span>Contact</span></a>
       </nav>
       <div class="nav-actions">
-        <a class="btn btn-ink btn-small" data-download href="#download"><span class="rolla roll"><span>Download</span></span> <i class="btn-arrow">↗</i></a>
+        <a class="btn btn-ink btn-small" data-download href="#download"><span class="rolla roll"><span>Download V3</span></span> <i class="btn-arrow">↗</i></a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span class="sr-only">Open menu</span><i></i><i></i></button>
       </div>
     </div>
@@ -37,12 +38,13 @@
 
   <div class="mobile-menu" id="mobile-menu" hidden>
     <nav aria-label="Mobile navigation">
-      <a href="#features"><strong>Features</strong><small>Import, totals, reports and export</small></a>
+      <a href="#features"><strong>Features</strong><small>Import, manual entry, totals &amp; export</small></a>
       <a href="#workflow"><strong>How it works</strong><small>Four steps from sheet to record</small></a>
+      <a href="#releases"><strong>Releases</strong><small>Version history &amp; downloads (v3, v2, v1)</small></a>
       <a href="#about"><strong>About</strong><small>Why Noor-ul-Hifz exists</small></a>
       <a href="#contact"><strong>Contact</strong><small>Talk to the developer</small></a>
     </nav>
-    <a class="btn btn-gold" data-download href="#download">Download for Windows <i class="btn-arrow">↓</i></a>
+    <a class="btn btn-gold" data-download href="#download">Download V3 for Windows <i class="btn-arrow">↓</i></a>
   </div>
 
   <main>
@@ -51,7 +53,7 @@
       <div class="container">
         <div class="hero-top">
           <span class="eyebrow"><span class="dot"></span> Built for Hifz &amp; Qur'an institutes</span>
-          <span class="eyebrow eyebrow-right">Windows · Offline · v1</span>
+          <span class="eyebrow eyebrow-right"><span class="badge-v">v3.0</span> Windows · Offline · Latest</span>
         </div>
 
         <h1 class="hero-title" aria-label="Bye bye scattered sheets, hello Noor-ul-Hifz">
@@ -61,10 +63,10 @@
         </h1>
 
         <div class="hero-bottom">
-          <p class="hero-text reveal">Noor-ul-Hifz turns the daily teacher sheet into a calm, organised offline record of attendance, late arrivals, Sabaq, Sabqi and Manzil, kept for every student, every day.</p>
+          <p class="hero-text reveal">Noor-ul-Hifz turns the daily teacher sheet into a calm, organised offline record of attendance, late arrivals, Sabaq, Sabqi and Manzil, kept for every student, every day. Now upgraded in Version 3 with persistent storage, manual entry, and custom categories.</p>
           <div class="hero-actions reveal">
-            <a class="btn btn-ink" data-download href="#download">Download for Windows <i class="btn-arrow">↓</i></a>
-            <a class="btn btn-line" href="#features">See what it does <i class="btn-arrow">→</i></a>
+            <a class="btn btn-ink" data-download href="#download">Download V3 for Windows <i class="btn-arrow">↓</i></a>
+            <a class="btn btn-line" href="#releases">View all releases <i class="btn-arrow">→</i></a>
           </div>
         </div>
       </div>
@@ -81,11 +83,13 @@
             <aside class="window-sidebar">
               <div class="side-active">▦ <span>Dashboard</span></div>
               <div>↥ <span>Import Report</span></div>
+              <div>✎ <span>Manual Entry</span> <span class="win-badge">v3</span></div>
               <div>◎ <span>Collect Report</span></div>
               <div>◉ <span>All Students</span></div>
+              <div>⚙ <span>App Settings</span> <span class="win-badge">v3</span></div>
             </aside>
             <div class="dashboard-preview">
-              <div class="preview-head"><div><small>Daily overview</small><h3>Student Monitoring</h3></div><span class="date-pill">Today · 02 Oct 2026</span></div>
+              <div class="preview-head"><div><small>Daily overview · Noor-ul-Hifz v3.0</small><h3>Student Monitoring</h3></div><span class="date-pill">Today · 17 Oct 2026</span></div>
               <div class="stat-grid">
                 <div><small>Students</small><strong>128</strong><span>Registered</span></div>
                 <div><small>Absent</small><strong>07</strong><span>Today</span></div>
@@ -97,6 +101,7 @@
                 <div class="row"><b>#1051</b><span>Ahmad Raza</span><i class="tag amber">Late</i></div>
                 <div class="row"><b>#1088</b><span>Hamza Khan</span><i class="tag red">Sabaq</i></div>
               </div>
+              <div class="preview-footer"><span class="status-indicator"></span> Persistent SQLite Storage active · 1-Click Backup ready</div>
             </div>
           </div>
         </div>
@@ -150,40 +155,44 @@
           <article class="feature-card fc-navy fc-wide reveal">
             <span class="fc-num">01</span>
             <div class="fc-icon">↥</div>
-            <h3>Smart Excel Import</h3>
-            <p>Import your existing daily report directly. Fixed, reliable sections for each student condition, with no retyping.</p>
-            <span class="fc-note">5 daily categories</span>
+            <h3>Smart Excel Import &amp; Upsert</h3>
+            <p>Import your institute's daily attendance sheet with zero retyping. In V3, re-importing the same date replaces daily flags cleanly rather than merging, ensuring corrections never leave lingering marks.</p>
+            <span class="fc-note">Enhanced in V3</span>
           </article>
           <article class="feature-card fc-gold reveal">
             <span class="fc-num">02</span>
-            <div class="fc-icon">◷</div>
-            <h3>Flexible Dates</h3>
-            <p>Review every import before saving. The date defaults to today, can be changed, and future dates are blocked.</p>
+            <div class="fc-icon">✎</div>
+            <h3>Manual Student Entry</h3>
+            <p>No Excel file today? Quickly record or update daily student attendance, lateness, or missed Sabaq, Sabqi, and Manzil directly on the fly in the app.</p>
+            <span class="fc-note">New in V3</span>
           </article>
           <article class="feature-card fc-paper reveal">
             <span class="fc-num">03</span>
-            <div class="fc-icon">▤</div>
-            <h3>All Students</h3>
-            <p>One clean directory with running totals for absence, lateness, Sabaq, Sabqi and Manzil.</p>
+            <div class="fc-icon">⚙</div>
+            <h3>Custom Categories &amp; Mapping</h3>
+            <p>Add new custom tracking categories, edit Urdu and English display labels, and adjust Excel row ranges directly inside the new App Settings window.</p>
+            <span class="fc-note">New in V3</span>
           </article>
           <article class="feature-card fc-cream reveal">
             <span class="fc-num">04</span>
-            <div class="fc-icon">◫</div>
-            <h3>Collect Reports</h3>
-            <p>Enter a student ID and pull every accumulated record from your saved daily history.</p>
+            <div class="fc-icon">◷</div>
+            <h3>Persistent Storage &amp; Backups</h3>
+            <p>Database is stored safely in Windows AppData and persists across restarts and updates. Create timestamped database backups with a single click.</p>
+            <span class="fc-note">Critical fix in V3</span>
           </article>
           <article class="feature-card fc-paper reveal">
             <span class="fc-num">05</span>
-            <div class="fc-icon">⇩</div>
-            <h3>Excel Export</h3>
-            <p>Turn stored records into practical Excel reports for the office, monthly review and archiving.</p>
+            <div class="fc-icon">▤</div>
+            <h3>All Students &amp; Excel Export</h3>
+            <p>One clean directory with running totals for absence, lateness, and missed lessons. Lookup students by ID and export complete logs to Excel in seconds.</p>
+            <span class="fc-note">Instant reporting</span>
           </article>
           <article class="feature-card fc-ink fc-full reveal">
             <span class="fc-num">06</span>
             <div class="fc-icon">⌁</div>
-            <h3>Offline &amp; Private</h3>
-            <p>Local SQLite storage means the core application works without an internet connection or a cloud account.</p>
-            <span class="fc-note">No account required</span>
+            <h3>Offline &amp; Institute-Private</h3>
+            <p>Local SQLite storage keeps student information strictly on the institute's computer. No web servers, no internet requirement, and zero subscription fees.</p>
+            <span class="fc-note">100% Private · No account required</span>
           </article>
         </div>
       </div>
@@ -239,13 +248,176 @@
       </div>
     </section>
 
+    <!-- RELEASES -->
+    <section class="section releases" id="releases">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker reveal">Release History</span>
+          <h2 class="display reveal">Download Noor-ul-Hifz.<br><em>Choose your release.</em></h2>
+          <p class="releases-subtitle reveal">Version 3.0 is the recommended latest release with persistent local storage, manual entry, and customizable categories. Previous versions are archived below for compatibility and historical reference.</p>
+        </div>
+
+        <div class="releases-container">
+          <!-- V3 CARD (FLAGSHIP / FEATURED) -->
+          <article class="release-card release-v3 reveal">
+            <div class="release-header">
+              <div class="release-title-group">
+                <div class="release-tag-row">
+                  <span class="release-version">Version 3.0</span>
+                  <span class="release-badge badge-latest">★ Latest &amp; Recommended</span>
+                  <span class="release-badge badge-os">Windows 10 / 11</span>
+                </div>
+                <h3 class="release-name">Noor-ul-Hifz V3.0 (Setup)</h3>
+                <p class="release-summary">Major upgrade introducing persistent local database storage, manual student entry without Excel, configurable categories, custom Excel sheet mapping, same-day upsert fixes, and one-click database backups.</p>
+              </div>
+              <div class="release-download-cta">
+                <a class="btn btn-gold release-btn" href="https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_3/Noor-ul-Hifz-Setup-3.0.zip" target="_blank" rel="noopener">
+                  <span>Download V3.0 (ZIP)</span> <i class="btn-arrow">↓</i>
+                </a>
+                <span class="release-file-info">Noor-ul-Hifz-Setup-3.0.zip · Includes Installer</span>
+              </div>
+            </div>
+
+            <div class="release-divider"></div>
+
+            <div class="release-body">
+              <h4 class="release-features-title">What's in Version 3.0:</h4>
+              <div class="release-features-grid">
+                <div class="feature-item">
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>Persistent Database Storage</strong>
+                    <p>Stored safely in <code>%LOCALAPPDATA%\Noor-ul-Hifz</code>, permanently fixing data loss upon closing the one-file EXE.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>New Manual Entry Module</strong>
+                    <p>Record daily student status directly without needing an Excel sheet; loads existing students by ID.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>Corrected Same-Day Upsert</strong>
+                    <p>Re-importing or updating same-day records cleanly replaces flags instead of merging old marks.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>Configurable Custom Categories</strong>
+                    <p>Add new tracking categories, edit Urdu/English labels, and customize Excel row ranges in App Settings.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>Custom Excel Mapping</strong>
+                    <p>Customize the Excel worksheet name, report date cell, and ID / Name column ranges to match institute templates.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>1-Click Backup &amp; Data Folder</strong>
+                    <p>Create timestamped database backups with one click and quickly access the local storage directory.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>Student &amp; Record Deletion</strong>
+                    <p>Safely delete individual daily logs, remove all history for a student, or manage registered student records.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <span class="check-icon">✓</span>
+                  <div>
+                    <strong>Error Logging &amp; Inno Setup</strong>
+                    <p>Built-in file logging (<code>app.log</code>) and professional Windows wizard installer with desktop/Start Menu shortcuts.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PREVIOUS RELEASES ROW (V2 & V1) -->
+          <div class="previous-releases-grid">
+            <!-- V2 CARD -->
+            <article class="release-card release-archive reveal">
+              <div class="archive-header">
+                <div class="archive-tags">
+                  <span class="release-version">Version 2.0</span>
+                  <span class="release-badge badge-archive">Previous Release</span>
+                </div>
+                <h3 class="archive-title">Noor-ul-Hifz V2.0</h3>
+                <p class="archive-desc">Introduced standalone Windows executable packaging, fixed-range daily Excel imports, and running student directories.</p>
+              </div>
+
+              <div class="archive-features">
+                <h4 class="archive-features-title">What's in Version 2.0:</h4>
+                <ul>
+                  <li>Standalone Windows executable packaging (PyInstaller one-file setup).</li>
+                  <li>Fixed-range Excel daily report import from <code>یومیہ رپورٹ</code>.</li>
+                  <li>Dashboard overview with total students and daily absent/late counts.</li>
+                  <li>Collect Reports lookup by student ID with date-by-date history.</li>
+                  <li>All Students directory with running condition totals.</li>
+                  <li>Excel report export for office printing and archiving.</li>
+                  <li>Local SQLite database integration.</li>
+                </ul>
+              </div>
+
+              <div class="archive-footer">
+                <a class="btn btn-ink btn-small" href="https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_2/Noor-ul-Hifz-Setup-2.0.zip" target="_blank" rel="noopener">
+                  <span>Download V2.0 (ZIP)</span> <i class="btn-arrow">↓</i>
+                </a>
+                <span class="archive-file-tag">Noor-ul-Hifz-Setup-2.0.zip</span>
+              </div>
+            </article>
+
+            <!-- V1 CARD -->
+            <article class="release-card release-archive reveal">
+              <div class="archive-header">
+                <div class="archive-tags">
+                  <span class="release-version">Version 1.0</span>
+                  <span class="release-badge badge-archive">Initial Release</span>
+                </div>
+                <h3 class="archive-title">Noor-ul-Hifz V1.0</h3>
+                <p class="archive-desc">The original lightweight prototype that pioneered offline student monitoring for Qur'an memorization institutes.</p>
+              </div>
+
+              <div class="archive-features">
+                <h4 class="archive-features-title">What's in Version 1.0:</h4>
+                <ul>
+                  <li>Initial Python application release.</li>
+                  <li>Basic daily Excel workbook parsing.</li>
+                  <li>5 core categories tracking (غیر حاضری، تاخیر، سبق، سبقی، منزل).</li>
+                  <li>Foundational local SQLite storage.</li>
+                  <li>Basic student tally calculations and offline workflow.</li>
+                </ul>
+              </div>
+
+              <div class="archive-footer">
+                <a class="btn btn-line btn-small" href="https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_1/Noor-ul-Hifz_V1.zip" target="_blank" rel="noopener">
+                  <span>Download V1.0 (ZIP)</span> <i class="btn-arrow">↓</i>
+                </a>
+                <span class="archive-file-tag">Noor-ul-Hifz_V1.zip</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- DOWNLOAD -->
     <section class="download-section" id="download">
       <div class="container">
         <a class="download-big" data-download href="#download">
-          <span class="download-kicker">Ready when you are</span>
-          <span class="download-word"><span class="roll"><span>download it</span></span></span>
-          <span class="download-meta">Windows desktop application · GitHub Releases <i class="btn-arrow">↓</i></span>
+          <span class="download-kicker">Latest Release · Version 3.0</span>
+          <span class="download-word"><span class="roll"><span>download v3</span></span></span>
+          <span class="download-meta">Noor-ul-Hifz-Setup-3.0.zip · Windows 10 / 11 · Offline &amp; Private <i class="btn-arrow">↓</i></span>
         </a>
         <div class="download-art reveal"><img src="assets/noor-ul-hifz-logo.png" alt="Noor-ul-Hifz logo"></div>
       </div>

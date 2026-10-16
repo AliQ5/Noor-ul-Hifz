@@ -13,6 +13,26 @@ student summaries.
 
 ------------------------------------------------------------------------
 
+## 📥 Releases & Downloads
+
+| Version | Status | Package | Download Link |
+|---|---|---|---|
+| **V3.0 (Latest)** | **Current / Recommended** | Windows Setup ZIP | [Download V3.0](https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_3/Noor-ul-Hifz-Setup-3.0.zip) |
+| **V2.0** | Previous Release | Windows Setup ZIP | [Download V2.0](https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_2/Noor-ul-Hifz-Setup-2.0.zip) |
+| **V1.0** | Initial Release | ZIP Archive | [Download V1.0](https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_1/Noor-ul-Hifz_V1.zip) |
+
+### 🚀 What's New in Version 3.0:
+- **Persistent Database Storage**: Stored in `%LOCALAPPDATA%\Noor-ul-Hifz\student_logs.db`, preventing data loss on app exit.
+- **Manual Entry Module**: Record attendance, lateness, and Sabaq/Manzil status directly without Excel.
+- **Corrected Same-Day Upsert**: Updating records replaces daily flags cleanly rather than merging old marks.
+- **Configurable Custom Categories**: Add custom categories, edit labels, and set row ranges in App Settings.
+- **Custom Excel Mapping**: Configurable sheet name (`یومیہ رپورٹ`), date cell (`G1`), and ID/name column ranges.
+- **1-Click Database Backup**: Instant timestamped database backups with an "Open Data Folder" button.
+- **Student & Log Deletion**: Full control over student records and daily logs.
+- **Diagnostics & Logging**: Automated error logging to `%LOCALAPPDATA%\Noor-ul-Hifz\logs\app.log`.
+
+------------------------------------------------------------------------
+
 ## ✨ Overview
 
 Noor-ul-Hifz is built for institutes where teachers or office staff need
@@ -197,29 +217,19 @@ operation.
 
 The application uses a local SQLite database.
 
-Typical project structure:
+### When Running as Packaged Windows App (V3):
+```text
+%LOCALAPPDATA%\Noor-ul-Hifz\student_logs.db
+```
+The database is created automatically and survives application restarts and EXE replacement.
 
-``` text
-Noor-ul-Hifz/
-├── Noor-ul-Hifz.exe
-├── data/
-│   └── hifz_logs.db
-└── ...
+### When Running from Python Source:
+```text
+data/student_logs.db
 ```
 
-The database contains the application's locally stored student and
-daily-log information.
-
-### Backup
-
-For a portable/local deployment, regularly back up the database file:
-
-``` text
-data/hifz_logs.db
-```
-
-A simple backup can be made by copying the database file to another
-secure location.
+### Database Backup
+In V3, you can create a timestamped backup directly inside the application with one click, or by copying the database file to a secure backup folder.
 
 ------------------------------------------------------------------------
 

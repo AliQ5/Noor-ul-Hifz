@@ -613,12 +613,61 @@ a:focus-visible .roll>span {
 .window-sidebar>div {
   padding: 10px 14px;
   border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.win-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--ink);
+  margin-left: auto;
+  line-height: 1.4;
+  letter-spacing: .02em;
 }
 
 .window-sidebar .side-active {
   background: var(--butter);
   color: var(--ink);
   font-weight: 600;
+}
+
+.preview-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  margin-top: 18px;
+  border-radius: 12px;
+  background: rgba(79, 138, 98, .1);
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 3px rgba(79, 138, 98, .25);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.badge-v {
+  background: var(--gold);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  letter-spacing: .02em;
+  display: inline-block;
 }
 
 .dashboard-preview {
@@ -1317,6 +1366,288 @@ a:focus-visible .roll>span {
   letter-spacing: .02em;
 }
 
+/* ---------- Releases ---------- */
+.releases {
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+.releases-subtitle {
+  margin: 18px 0 0;
+  max-width: 720px;
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.releases-container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: 48px;
+}
+
+.release-card {
+  border-radius: var(--radius);
+  padding: clamp(28px, 4vw, 48px);
+  position: relative;
+  transition: transform .6s var(--ease), box-shadow .6s var(--ease);
+}
+
+.release-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px -30px rgba(20, 33, 58, .3);
+}
+
+/* Featured V3 Card */
+.release-v3 {
+  background: var(--navy);
+  color: var(--cream);
+  border: 2px solid var(--gold);
+  box-shadow: 0 20px 50px -20px rgba(20, 33, 58, .5);
+}
+
+.release-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.release-title-group {
+  flex: 1 1 500px;
+}
+
+.release-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.release-version {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.release-badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: .02em;
+}
+
+.badge-latest {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.badge-os {
+  background: rgba(255, 255, 255, .15);
+  color: var(--cream);
+}
+
+.badge-archive {
+  background: rgba(20, 33, 58, .08);
+  color: var(--ink);
+}
+
+.release-name {
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.release-summary {
+  font-size: 17px;
+  line-height: 1.6;
+  opacity: .88;
+  max-width: 680px;
+  margin: 0;
+}
+
+.release-download-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.release-btn {
+  padding: 16px 28px;
+  font-size: 16px;
+}
+
+.release-file-info {
+  font-size: 12px;
+  opacity: .65;
+  letter-spacing: -.01em;
+}
+
+.release-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, .14);
+  margin: 32px 0 28px;
+}
+
+.release-features-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin: 0 0 22px;
+}
+
+.release-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 36px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(195, 154, 90, .25);
+  color: var(--gold-soft);
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.feature-item strong {
+  display: block;
+  font-size: 16px;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: .78;
+}
+
+.feature-item code {
+  font-family: inherit;
+  font-size: 12px;
+  background: rgba(255, 255, 255, .14);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+/* Previous Releases Row */
+.previous-releases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.release-archive {
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-header {
+  margin-bottom: 20px;
+}
+
+.archive-tags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.archive-title {
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  margin: 0 0 8px;
+}
+
+.archive-desc {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.archive-features {
+  flex: 1;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+
+.archive-features-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--navy-2);
+  margin: 0 0 14px;
+}
+
+.archive-features ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 14px;
+  color: #34404a;
+}
+
+.archive-features li {
+  line-height: 1.5;
+}
+
+.archive-features code {
+  font-size: 13px;
+  background: rgba(20, 33, 58, .07);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.archive-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.archive-file-tag {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
 /* ---------- Download ---------- */
 .download-section {
   background: var(--butter);
@@ -1591,9 +1922,29 @@ a:focus-visible .roll>span {
   .window-sidebar {
     display: none;
   }
+
+  .previous-releases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .release-features-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
+  .release-header {
+    flex-direction: column;
+  }
+
+  .release-download-cta {
+    width: 100%;
+  }
+
+  .release-download-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
   body {
     font-size: 16px;
   }
