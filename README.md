@@ -17,11 +17,28 @@ student summaries.
 
 | Version | Status | Package | Download Link |
 |---|---|---|---|
-| **V3.0 (Latest)** | **Current / Recommended** | Windows Setup ZIP | [Download V3.0](https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_3/Noor-ul-Hifz-Setup-3.0.zip) |
-| **V2.0** | Previous Release | Windows Setup ZIP | [Download V2.0](https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_2/Noor-ul-Hifz-Setup-2.0.zip) |
+| **V4.0 (Latest)** | **Current / Recommended** | Windows Setup ZIP | [Download V4.0](https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4/Noor-ul-Hifz-Setup-4.0.zip) |
+| **V3.0** | Previous Release | Windows Setup ZIP | [Download V3.0](https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_3/Noor-ul-Hifz-Setup-3.0.zip) |
+| **V2.0** | Archived Release | Windows Setup ZIP | [Download V2.0](https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_2/Noor-ul-Hifz-Setup-2.0.zip) |
 | **V1.0** | Initial Release | ZIP Archive | [Download V1.0](https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_1/Noor-ul-Hifz_V1.zip) |
 
-### 🚀 What's New in Version 3.0:
+### 🚀 What's New in Version 4.0:
+- **Multi-Dimensional Record Filtering (Collect Student Report)**:
+  - Filter any student's record history by **Specific Date** (`YYYY-MM-DD` with one-click "Today" shortcut), **Day of Week** (e.g. Every Friday / پیر، منگل، بدھ، جمعرات، جمعہ، ہفتہ، اتوار), **Week Number** (Week 1–53 + Year), **Month** (e.g. October 2026), or complete **Year**.
+  - **Dynamic Summaries & Lifetime Totals**: Filtered tallies and lifetime totals displayed side-by-side for rapid evaluation.
+  - **Filtered Styled Excel Export**: Exports styled, filtered spreadsheets with filter parameters preserved in the report header.
+- **Appearance & Customisation (App Settings)**:
+  - **Theme Selection**: Toggle between crisp Light Mode and immersive Dark Mode with instant live application.
+  - **Accent Color Palettes**: Choose from 8 curated presets (*Classic Blue, Ocean Teal, Emerald Green, Royal Violet, Crimson Rose, Warm Amber, Slate Indigo, Obsidian*) or custom Hex code.
+  - **Font Scaling**: Adjust interface font sizes across Small, Normal, and Large.
+- **V4 Performance & Concurrency Engine**:
+  - SQLite **WAL (Write-Ahead Logging)** mode for lightning-fast reads and writes.
+  - Multi-column index caching on `(student_id, log_date)` and `log_date`.
+  - Modern zebra-striped treeviews and active navigation pill indicators.
+- **Excel Import & Manual Entry Safeguards**:
+  - Overwrite protection, future date prevention, and automated safety backups.
+
+### 📦 Previous Updates (Version 3.0):
 - **Persistent Database Storage**: Stored in `%LOCALAPPDATA%\Noor-ul-Hifz\student_logs.db`, preventing data loss on app exit.
 - **Manual Entry Module**: Record attendance, lateness, and Sabaq/Manzil status directly without Excel.
 - **Corrected Same-Day Upsert**: Updating records replaces daily flags cleanly rather than merging old marks.
@@ -217,7 +234,7 @@ operation.
 
 The application uses a local SQLite database.
 
-### When Running as Packaged Windows App (V3):
+### When Running as Packaged Windows App (V4):
 ```text
 %LOCALAPPDATA%\Noor-ul-Hifz\student_logs.db
 ```
@@ -229,7 +246,7 @@ data/student_logs.db
 ```
 
 ### Database Backup
-In V3, you can create a timestamped backup directly inside the application with one click, or by copying the database file to a secure backup folder.
+In V4/V3, you can create a timestamped backup directly inside the application with one click, or by copying the database file to a secure backup folder.
 
 ------------------------------------------------------------------------
 
