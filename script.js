@@ -1,11 +1,15 @@
 /* Noor-ul-Hifz GitHub repository & release links */
 const GITHUB_REPO_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App";
-const V4_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4/Noor-ul-Hifz-Setup-4.0.zip";
+const V4_2_2_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4.2.2/Noor-ul-Hifz-Setup-4.2.zip";
+const V4_2_1_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4.2.1/Noor-ul-Hifz-Setup-4.2.1.zip";
+const V4_2_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4.2/Noor-ul-Hifz-Setup-4.2.zip";
+const V4_1_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4.1/Noor-ul-Hifz-Setup-4.1.zip";
+const V4_0_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4/Noor-ul-Hifz-Setup-4.0.zip";
 const V3_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_3/Noor-ul-Hifz-Setup-3.0.zip";
 const V2_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_2/Noor-ul-Hifz-Setup-2.0.zip";
 const V1_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_1/Noor-ul-Hifz_V1.zip";
 
-const DOWNLOAD_URL = V4_DOWNLOAD_URL;
+const DOWNLOAD_URL = V4_2_2_DOWNLOAD_URL;
 
 document.querySelectorAll('[data-download]').forEach(a => {
   a.href = DOWNLOAD_URL;
@@ -17,7 +21,10 @@ document.querySelectorAll('[data-github]').forEach(a => {
   a.target = '_blank';
   a.rel = 'noopener';
 });
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
 /* Header: solid after scrolling, hides on scroll down, returns on scroll up */
 const header = document.querySelector('.site-header');
@@ -64,19 +71,23 @@ tourTabs.forEach(tab => {
   });
 });
 
-/* Theme Palette Switcher on Settings Tab */
+/* Screenshot Image Preview Switchers (Theme, Settings, Ingestion, etc.) */
 const themePillBtns = document.querySelectorAll('.theme-pill-btn');
-const themePreviewImg = document.getElementById('theme-preview-img');
-if (themePreviewImg) {
-  themePillBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      themePillBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const imgSrc = btn.getAttribute('data-img');
-      if (imgSrc) themePreviewImg.src = imgSrc;
-    });
+themePillBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const parentRow = btn.closest('.theme-toggle-row');
+    if (parentRow) {
+      parentRow.querySelectorAll('.theme-pill-btn').forEach(b => b.classList.remove('active'));
+    }
+    btn.classList.add('active');
+    const targetId = btn.getAttribute('data-target') || 'theme-preview-img';
+    const targetImg = document.getElementById(targetId);
+    const imgSrc = btn.getAttribute('data-img');
+    if (targetImg && imgSrc) {
+      targetImg.src = imgSrc;
+    }
   });
-}
+});
 
 /* Scroll reveals, staggered within each parent */
 const reveals = document.querySelectorAll('.reveal, .hero-stage');
@@ -94,27 +105,4 @@ if ('IntersectionObserver' in window) {
   reveals.forEach(el => io.observe(el));
 } else {
   reveals.forEach(el => el.classList.add('is-in'));
-}
-
-// Contact Number Animation
-
-const contact = document.getElementById('cnct');
-
-if (contact) {
-  const originalContactText = contact.textContent;
-  let contactAnimationTimeout;
-
-  const showContactText = text => {
-    window.clearTimeout(contactAnimationTimeout);
-    contact.classList.add('is-changing');
-    contactAnimationTimeout = window.setTimeout(() => {
-      contact.textContent = text;
-      contact.classList.remove('is-changing');
-    }, 1);
-  };
-
-  contact.addEventListener('mouseenter', () => showContactText('0300-SHHHHHHHHH'));
-  contact.addEventListener('mouseleave', () => showContactText(originalContactText));
-  contact.addEventListener('focus', () => showContactText('0300-SHHHHHHHHH'));
-  contact.addEventListener('blur', () => showContactText(originalContactText));
 }

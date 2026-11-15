@@ -1,26 +1,33 @@
 /* ============================================================
-   Noor-ul-Hifz V4 — Modern Dark Obsidian Theme
-   Matching the official V4 desktop application interface.
+   Noor-ul-Hifz V4.2.2 (Basa'ir Series) — Modern Dark Obsidian & Teal Theme
+   Matching the official V4.2.2 React 19 + WebView2 desktop application.
    ============================================================ */
 :root {
-  --bg: #090d16;
-  --bg-deep: #060910;
-  --paper: #0f172a;
-  --paper-2: #141f34;
-  --cream: #18253d;
-  --cream-soft: #1e2e4a;
+  --bg: #060913;
+  --bg-deep: #03050c;
+  --paper: #0b1120;
+  --paper-2: #10192e;
+  --cream: #142038;
+  --cream-soft: #1a2a49;
   --ink: #f8fafc;
-  --navy: #0d1527;
+  --navy: #090f1d;
   --navy-2: #1e293b;
-  --gold: #e11d48;         /* V4 Signature Crimson Rose */
-  --gold-soft: #fb7185;
-  --butter: #152238;
+  --gold: #0d9488;         /* V4.2.2 Signature Emerald Teal */
+  --gold-soft: #2dd4bf;
+  --accent: #0d9488;
+  --accent-soft: #2dd4bf;
+  --accent-glow: rgba(13, 148, 136, .45);
+  --indigo: #4f46e5;
+  --indigo-soft: #818cf8;
+  --purple: #7c3aed;
+  --purple-soft: #c4b5fd;
+  --butter: #0e1629;
   --muted: #94a3b8;
   --dim: #64748b;
   --line: rgba(255, 255, 255, .08);
   --line-strong: rgba(255, 255, 255, .16);
 
-  /* Status Colors from V4 App */
+  /* Status Colors from V4.2.2 App */
   --crimson: #e11d48;
   --crimson-glow: rgba(225, 29, 72, .35);
   --teal: #0d9488;
@@ -176,23 +183,23 @@ a:focus-visible .roll>span {
 .btn-ink {
   background: var(--gold);
   color: #ffffff;
-  box-shadow: 0 10px 28px -6px rgba(225, 29, 72, .45);
+  box-shadow: 0 10px 28px -6px rgba(13, 148, 136, .45);
 }
 
 .btn-ink:hover {
-  background: #f43f5e;
-  box-shadow: 0 14px 34px -6px rgba(225, 29, 72, .65);
+  background: #14b8a6;
+  box-shadow: 0 14px 34px -6px rgba(13, 148, 136, .65);
 }
 
 .btn-gold {
   background: var(--gold);
   color: #ffffff;
-  box-shadow: 0 10px 28px -6px rgba(225, 29, 72, .45);
+  box-shadow: 0 10px 28px -6px rgba(13, 148, 136, .45);
 }
 
 .btn-gold:hover {
-  background: #f43f5e;
-  box-shadow: 0 14px 34px -6px rgba(225, 29, 72, .65);
+  background: #14b8a6;
+  box-shadow: 0 14px 34px -6px rgba(13, 148, 136, .65);
 }
 
 .btn-line {
@@ -260,7 +267,7 @@ a:focus-visible .roll>span {
   display: grid;
   place-items: center;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(225, 29, 72, .3), 0 0 20px rgba(225, 29, 72, .2);
+  box-shadow: 0 0 0 1px rgba(13, 148, 136, .35), 0 0 20px rgba(13, 148, 136, .2);
 }
 
 .brand-mark img {
@@ -1130,8 +1137,8 @@ a:focus-visible .roll>span {
 .fc-navy {
   background: linear-gradient(145deg, #131d2e 0%, #0d1527 100%);
   color: var(--ink);
-  border: 1px solid rgba(225, 29, 72, .25);
-  box-shadow: 0 10px 30px -10px rgba(225, 29, 72, .2);
+  border: 1px solid rgba(13, 148, 136, .25);
+  box-shadow: 0 10px 30px -10px rgba(13, 148, 136, .2);
 }
 
 .fc-navy .fc-note {
@@ -1185,7 +1192,7 @@ a:focus-visible .roll>span {
 .feature-card:hover {
   transform: translateY(-6px) rotate(-.6deg);
   box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .7);
-  border-color: rgba(225, 29, 72, .4);
+  border-color: rgba(13, 148, 136, .4);
 }
 
 /* ---------- Interlude ---------- */
@@ -1473,7 +1480,7 @@ a:focus-visible .roll>span {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   border: 2px solid var(--gold);
-  box-shadow: 0 20px 50px -20px rgba(20, 33, 58, .5);
+  box-shadow: 0 20px 50px -20px rgba(13, 148, 136, .35);
 }
 
 .release-header {
@@ -1651,7 +1658,7 @@ a:focus-visible .roll>span {
 
 .archive-features code {
   color: var(--gold-soft);
-  background: rgba(225, 29, 72, .12);
+  background: rgba(13, 148, 136, .12);
 }
 
 .archive-header {
@@ -2135,7 +2142,7 @@ a:focus-visible .roll>span {
   border-radius: var(--radius);
   background: #0d131f;
   border: 1px solid rgba(255, 255, 255, .12);
-  box-shadow: 0 30px 90px -20px rgba(225, 29, 72, .25), 0 0 0 1px rgba(255, 255, 255, .08);
+  box-shadow: 0 30px 90px -20px rgba(13, 148, 136, .25), 0 0 0 1px rgba(255, 255, 255, .08);
   overflow: hidden;
   position: relative;
 }
@@ -2266,7 +2273,7 @@ a:focus-visible .roll>span {
   background: var(--gold);
   color: #ffffff;
   border-color: var(--gold);
-  box-shadow: 0 8px 24px -4px rgba(225, 29, 72, .5);
+  box-shadow: 0 8px 24px -4px rgba(13, 148, 136, .5);
 }
 
 .tour-pane {
@@ -2319,11 +2326,11 @@ a:focus-visible .roll>span {
   gap: 8px;
   padding: 4px 12px;
   border-radius: 999px;
-  background: rgba(225, 29, 72, .15);
+  background: rgba(13, 148, 136, .15);
   color: var(--gold-soft);
   font-size: 13px;
   font-weight: 700;
-  border: 1px solid rgba(225, 29, 72, .3);
+  border: 1px solid rgba(13, 148, 136, .3);
   align-self: flex-start;
 }
 
@@ -2364,7 +2371,7 @@ a:focus-visible .roll>span {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: rgba(225, 29, 72, .2);
+  background: rgba(13, 148, 136, .2);
   color: var(--gold-soft);
   display: grid;
   place-items: center;
@@ -2414,4 +2421,187 @@ a:focus-visible .roll>span {
     grid-template-columns: 1fr;
     gap: 32px;
   }
+}
+
+/* ---------- New in V4.2.2: Badges & Milestone Grids ---------- */
+.badge-beta {
+  background: rgba(124, 58, 237, .2);
+  color: #c4b5fd;
+  border: 1px solid rgba(124, 58, 237, .4);
+}
+
+.badge-milestone {
+  background: rgba(59, 130, 246, .2);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, .35);
+}
+
+.badge-react {
+  background: rgba(6, 182, 212, .2);
+  color: #67e8f9;
+  border: 1px solid rgba(6, 182, 212, .4);
+}
+
+.releases-section-header {
+  margin-top: 56px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+}
+
+.releases-section-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -.03em;
+  color: var(--ink);
+}
+
+.releases-section-header p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.beta-releases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .beta-releases-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.release-beta {
+  background: linear-gradient(160deg, #0e172a 0%, #080d19 100%);
+  color: var(--ink);
+  border: 1px solid rgba(124, 58, 237, .3);
+  box-shadow: 0 15px 35px -15px rgba(0, 0, 0, .5);
+  display: flex;
+  flex-direction: column;
+}
+
+.release-beta:hover {
+  border-color: rgba(124, 58, 237, .6);
+  box-shadow: 0 25px 50px -20px rgba(124, 58, 237, .25);
+}
+
+.release-beta.milestone {
+  border-color: rgba(59, 130, 246, .3);
+}
+
+.release-beta.milestone:hover {
+  border-color: rgba(59, 130, 246, .6);
+  box-shadow: 0 25px 50px -20px rgba(59, 130, 246, .25);
+}
+
+/* ---------- Version Evolution Comparison Table ---------- */
+.version-table-section {
+  margin-top: 64px;
+}
+
+.version-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #0b1120 0%, #060913 100%);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .5);
+  margin-top: 24px;
+}
+
+.version-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.55;
+  min-width: 860px;
+}
+
+.version-table th {
+  padding: 16px 20px;
+  background: #10192e;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line-strong);
+  white-space: nowrap;
+}
+
+.version-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  vertical-align: top;
+}
+
+.version-table tr:last-child td {
+  border-bottom: none;
+}
+
+.version-table tr:hover td {
+  background: rgba(255, 255, 255, .03);
+}
+
+.version-table tr.highlight td {
+  background: rgba(13, 148, 136, .09);
+  color: #f1f5f9;
+}
+
+.version-table tr.highlight td strong {
+  color: var(--gold-soft);
+}
+
+.version-table strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.version-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.version-pill.final {
+  background: var(--gold);
+  color: #ffffff;
+}
+
+.version-pill.beta {
+  background: rgba(124, 58, 237, .25);
+  color: #ddd6fe;
+  border: 1px solid rgba(124, 58, 237, .4);
+}
+
+.version-pill.milestone {
+  background: rgba(59, 130, 246, .25);
+  color: #bfdbfe;
+  border: 1px solid rgba(59, 130, 246, .4);
+}
+
+.version-pill.archived {
+  background: rgba(255, 255, 255, .08);
+  color: var(--muted);
+}
+
+.theme-pill-btn.purple.active {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  color: #ffffff;
 }
