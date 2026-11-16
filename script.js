@@ -1,6 +1,6 @@
 /* Noor-ul-Hifz GitHub repository & release links */
 const GITHUB_REPO_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App";
-const V4_2_2_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4.2.2/Noor-ul-Hifz-Setup-4.2.zip";
+const V4_2_2_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4.2.2/Noor-ul-Hifz-Setup-4.2.2.zip";
 const V4_2_1_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4.2.1/Noor-ul-Hifz-Setup-4.2.1.zip";
 const V4_2_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4.2/Noor-ul-Hifz-Setup-4.2.zip";
 const V4_1_DOWNLOAD_URL = "https://github.com/AliQ5/Noor-ul-Hifz_App/releases/download/Version_4.1/Noor-ul-Hifz-Setup-4.1.zip";
